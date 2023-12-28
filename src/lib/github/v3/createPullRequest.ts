@@ -1,6 +1,7 @@
 import { Octokit } from '@octokit/rest';
 import apm from 'elastic-apm-node';
 import Handlebars from 'handlebars';
+import registerHelpers from 'handlebars-helpers';
 import { ora } from '../../../lib/ora';
 import { ValidConfigOptions } from '../../../options/options';
 import { PACKAGE_VERSION } from '../../../utils/packageVersion';
@@ -179,3 +180,4 @@ export function getTitle({
 }
 
 Handlebars.registerHelper('shortSha', getShortSha);
+registerHelpers({ handlebars: Handlebars });

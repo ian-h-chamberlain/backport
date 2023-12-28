@@ -1,4 +1,5 @@
 import Handlebars from 'handlebars';
+import registerHelpers from 'handlebars-helpers';
 import { Commit } from '../../entrypoint.api';
 import { ValidConfigOptions } from '../../options/options';
 import { getShortSha } from '../github/commitFormatters';
@@ -39,3 +40,5 @@ export function getBackportBranchName({
     refValues,
   });
 }
+
+registerHelpers({ handlebars: Handlebars });

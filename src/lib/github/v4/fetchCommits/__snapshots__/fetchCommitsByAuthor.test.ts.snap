@@ -68,6 +68,7 @@ fragment SourceCommitWithTargetPullRequestFragment on Commit {
           }
         }
         baseRefName
+        headRefName
         mergeCommit {
           ...RemoteConfigHistoryFragment
           sha: oid

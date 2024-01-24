@@ -44,6 +44,7 @@ export const commitsByAuthorMock: CommitByAuthorResponse = {
                         title: 'Derive Queries Panel',
                         url: 'https://github.com/elastic/kibana/pull/85',
                         baseRefName: 'master',
+                        headRefName: 'master',
                         labels: {
                           nodes: [{ name: 'my-label-b' }],
                         },
@@ -86,6 +87,7 @@ export const commitsByAuthorMock: CommitByAuthorResponse = {
                           nodes: [{ name: 'v6.3.0' }],
                         },
                         baseRefName: 'master',
+                        headRefName: 'master',
                         number: 80,
                         mergeCommit: {
                           remoteConfigHistory: { edges: [] },

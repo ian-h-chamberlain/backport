@@ -276,6 +276,7 @@ describe('parseSourceCommit', () => {
           message: 'My commit message (#1234)',
           sha: 'my-sha',
         },
+        head: 'my-pr-branch',
       },
       sourceBranch: 'source-branch-from-associated-pull-request',
       targetPullRequestStates: [

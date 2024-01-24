@@ -36,6 +36,7 @@ export function getBackportBranchName({
 
   return template({
     sourcePullRequest: commits[0].sourcePullRequest, // assume that all commits are from the same PR
+    sourceBranch: commits[0].sourceBranch,
     targetBranch,
     refValues,
   });

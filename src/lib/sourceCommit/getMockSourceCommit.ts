@@ -92,6 +92,7 @@ export function getMockSourceCommit({
             baseRefName:
               sourcePullRequest.sourceBranch ??
               'source-branch-from-associated-pull-request',
+            headRefName: 'my-pr-branch',
             number: sourcePullRequest.number,
             timelineItems: {
               edges: timelineItems.map((timelineItem) => {

@@ -84,6 +84,7 @@ describe('fetchCommitsByAuthor', () => {
               sha: 'f3b618b9421fdecdb36862f907afbdd6344b361d',
               message: 'Add witch (#85)',
             },
+            head: 'master',
           },
           targetPullRequestStates: [],
           sourceBranch: 'master',
@@ -108,6 +109,7 @@ describe('fetchCommitsByAuthor', () => {
               message:
                 'Add SF mention (#80)\n\n* Add SF mention\r\n\r\n* Add several emojis!',
             },
+            head: 'master',
           },
           targetPullRequestStates: [
             {

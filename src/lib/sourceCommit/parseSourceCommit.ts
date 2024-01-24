@@ -29,6 +29,8 @@ export interface Commit {
       message: string;
       sha: string;
     };
+    // TODO: maybe come up with a better name? `sourceBranch` seems too confusing
+    head?: string;
   };
   sourceBranch: string;
   suggestedTargetBranches: string[];
@@ -38,6 +40,7 @@ export interface Commit {
 export interface SourcePullRequestNode {
   title: string;
   baseRefName: string;
+  headRefName: string;
   url: string;
   number: number;
   labels: {
@@ -177,6 +180,7 @@ export function parseSourceCommit({
                 sha: sourcePullRequest.mergeCommit.sha,
               }
             : undefined,
+          head: sourcePullRequest.headRefName,
         }
       : undefined,
     sourceBranch: sourcePullRequest?.baseRefName ?? options.sourceBranch,
@@ -216,6 +220,7 @@ export const SourceCommitWithTargetPullRequestFragment = gql`
             }
           }
           baseRefName
+          headRefName
 
           # source merge commit (the commit that actually went into the source branch)
           mergeCommit {

@@ -95,7 +95,7 @@ console.log(commits);
 
 /*
 [{
-  soureCommit: {
+  sourceCommit: {
     committedDate: '2021-12-20T14:20:16Z',
     sha: 'd421ddcf6157150596581c7885afa3690cec6339',
     message: '[APM] Add note about synthtrace to APM docs (#121633)',
